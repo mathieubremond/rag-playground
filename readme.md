@@ -1,6 +1,7 @@
-# Project Readme
+# RAG Playgound
 
-This project is a playground for experimenting with various data pipeline and retrieval techniques.
+This project is a playground for experimenting with various data pipeline and retrieval techniques for Generative AI.
+The project is using TypeScript and Node.js
 
 ## Installation
 
