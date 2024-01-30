@@ -22,7 +22,7 @@ export class MainRAG {
       userPrompt
     );
 
-    // Expected output: Answer:  Answer:  The jagged frontier refers to the uneven and dynamic boundary between tasks that can be performed better by humans using AI and tasks that can be performed better by AI alone. It is called "jagged" because tasks that appear to be of similar difficulty may vary in their performance when using AI. The boundary of the frontier can shift over time as AI capabilities continue to expand. Navigating this frontier and understanding its implications for human professionals and organizations is a challenge.
     return answer;
+    // Expected output: Answer:  Answer:  The jagged frontier refers to the uneven and dynamic boundary between tasks that can be performed better by humans using AI and tasks that can be performed better by AI alone. It is called "jagged" because tasks that appear to be of similar difficulty may vary in their performance when using AI. The boundary of the frontier can shift over time as AI capabilities continue to expand. Navigating this frontier and understanding its implications for human professionals and organizations is a challenge.
   }
 }

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pinecone-database/pinecone": "^1.1.2",
     "@types/twilio": "^3.19.3",
     "axios": "^0.21.4",
     "csv-parse": "^5.0.4",
@@ -17,6 +18,7 @@
     "csvtojson": "^2.0.10",
     "dotenv": "^10.0.0",
     "express": "^4.18.2",
+    "html-to-text": "^9.0.5",
     "langchain": "^0.1.2",
     "lodash": "^4.17.21",
     "node-ts": "^5.1.1",

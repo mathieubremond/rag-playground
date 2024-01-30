@@ -1,5 +1,9 @@
 import { VectorStore } from "langchain/vectorstores/base";
 import { Document } from "langchain/document";
+import { Pinecone } from "@pinecone-database/pinecone";
+import { OpenAIEmbeddings } from "@langchain/openai";
+import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { PinecodeStore } from "../Stores/PinecodeStore";
 
 /**
  * Class representing a Retriever.
@@ -20,12 +24,20 @@ export class SimilaritySearchRetrieverFromVectorStore {
    * @param prompt - The prompt for retrieval.
    * @returns A promise that resolves to an array of relevant documents.
    */
-  public async execute(
+  public async genericStoreRetrieveDocuments(
     vectorStore: VectorStore,
     prompt: string
   ): Promise<Document[]> {
     console.log("Generating retrieval for the prompt from the vector store");
     const relevantDocs = await vectorStore.similaritySearch(prompt);
     return relevantDocs;
+  }
+
+  public async pineconeStoreRetrieveDocuments(
+    prompt: string
+  ): Promise<Document[]> {
+    const vectorStore = await new PinecodeStore().getPinecodeStore();
+
+    return this.genericStoreRetrieveDocuments(vectorStore, prompt);
   }
 }
